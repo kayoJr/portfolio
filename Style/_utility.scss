@@ -1,0 +1,76 @@
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: $dark-color;
+    background: $main-color;
+  }
+  &-light {
+    @extend %btn-shared;
+    color: $dark-color;
+    background: $light-color;
+  }
+  &-dark {
+    @extend %btn-shared;
+    color: $light-color;
+    background: $dark-color;
+  }
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: $main-color;
+}
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.text-center {
+  text-align: center;
+}
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: $main-color;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 4rem;
+}
+.items-alt {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 4rem;
+}
+.bg-light {
+  background: $light-color;
+}
+.bg-medium {
+  background: $medium-color;
+}
+.section-title{
+ font-size:2rem;
+ display: block;
+ padding-bottom: 0.5rem;
+ text-align:center;
+ font-weight: 100;
+ text-transform: uppercase;
+}
